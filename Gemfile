@@ -35,8 +35,9 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'rspec-rails', '~> 7.0.0'
-  gem 'faker'
+  gem "rspec-rails", "~> 7.0.0"
+  gem "faker"
+
+  # Linting for ERB files
+  gem "erb_lint", "~> 0.9.0"
 end
-
-
