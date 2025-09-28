@@ -1,0 +1,16 @@
+<h1><%= @course.coding_class.title %></h1>
+<h2>Enrolled Students</h2>
+<% if @students.any? %>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student.full_name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No students enrolled yet.</p>
+<% end %>
+
+<br>
+<p><%= link_to 'To Course Page', course_path(@course) %></p>
+<p><%= link_to 'To Admin Dashboard', admin_dashboard_path %></p>
+
