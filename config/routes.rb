@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :enrollments
   resources :mentor_enrollment_assignments
   resources :lessons
-  resources :courses
+  resources :courses do
+    resources :submissions
+  end
   resources :coding_classes
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "/trimesters", to: "trimesters#index"

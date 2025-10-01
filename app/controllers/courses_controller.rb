@@ -13,6 +13,8 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @coding_classes = CodingClass.all
+    @trimesters = Trimester.all
   end
 
   # GET /courses/1/edit
