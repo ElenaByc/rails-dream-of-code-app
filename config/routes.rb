@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   end
   resources :coding_classes
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get "/trimesters", to: "trimesters#index"
-  get "/trimesters/:id", to: "trimesters#show"
+  resources :trimesters, only: [:index, :show, :edit, :update]
   get "/dashboard", to: "admin_dashboard#index", as: "admin_dashboard"
   
 

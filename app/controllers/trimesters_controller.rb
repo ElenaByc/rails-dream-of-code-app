@@ -7,4 +7,10 @@ class TrimestersController < ApplicationController
   def show
     @trimester = Trimester.find(params[:id])
   end
+
+  def edit
+    @trimester = Trimester.find(params[:id])
+  end
+
+
 end
