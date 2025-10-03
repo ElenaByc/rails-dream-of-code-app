@@ -19,7 +19,7 @@ class TrimestersController < ApplicationController
     input = params[:trimester][:application_deadline]
 
     if input.blank?
-      @trimester.errors.add(:application_deadline, "can't be blank")
+      @trimester.errors.add(:application_deadline, "cannot be blank")
       return render :edit, status: :bad_request
     end
 
