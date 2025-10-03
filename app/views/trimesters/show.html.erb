@@ -1,3 +1,6 @@
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 <h1>Trimester Details</h1>
 <ul>
   <li><strong>ID:</strong> <%= @trimester.id %></li>
@@ -7,3 +10,5 @@
   <li><strong>Start Date:</strong> <%= @trimester.start_date %></li>
   <li><strong>End Date:</strong> <%= @trimester.end_date %></li>
 </ul>
+<br>
+<%= button_to "Update trimester application deadline", edit_trimester_path(@trimester), method: :get %>

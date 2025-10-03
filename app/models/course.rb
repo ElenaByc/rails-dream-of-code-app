@@ -2,6 +2,13 @@ class Course < ApplicationRecord
   belongs_to :coding_class
   belongs_to :trimester
   has_many :enrollments
+  has_many :lessons
+  has_many :mentor_enrollment_assignments, through: :enrollments
+  has_many :raw_mentors, through: :mentor_enrollment_assignments, source: :mentor
+
+  def mentors
+    raw_mentors.distinct
+  end
 
   delegate :title, to: :coding_class
 
