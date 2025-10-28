@@ -1,4 +1,6 @@
 class SubmissionsController < ApplicationController
+  before_action :require_student, only: %i[ new create ]
+  before_action :require_mentor, only: %i[ edit update ]
   before_action :set_course_data, only: %i[ new create ]
 
   # GET /submissions/new
